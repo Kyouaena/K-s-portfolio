@@ -6,7 +6,6 @@ const links = [
   { key: "about" as const, href: "#about" },
   { key: "publications" as const, href: "#publications" },
   { key: "projects" as const, href: "#projects" },
-  { key: "agentLab" as const, href: "#agent-lab" },
   { key: "contact" as const, href: "#contact" },
 ];
 

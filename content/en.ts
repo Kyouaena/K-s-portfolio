@@ -10,7 +10,6 @@ export const en: SiteContent = {
     about: "About",
     publications: "Publications",
     projects: "Projects",
-    agentLab: "Agent Lab",
     contact: "Contact",
   },
   hero: {
@@ -71,7 +70,8 @@ export const en: SiteContent = {
   publications: {
     title: "Research & Publications",
     subtitle:
-      "Journal and conference work spanning agent security, sentiment analytics, and price prediction.",
+      "Journal and conference work spanning agent security, sentiment analytics, and price prediction. Click to try interactive demos.",
+    tryDemo: "Try demo →",
     journal: "Journals & manuscripts",
     conference: "Conferences",
     items: [
@@ -83,6 +83,7 @@ export const en: SiteContent = {
         year: "2026",
         status: "Under review",
         tags: ["Dialogue security", "Multi-stage detection"],
+        demoSlug: "finsec",
       },
       {
         id: "virinsight-tce",
@@ -92,6 +93,7 @@ export const en: SiteContent = {
         year: "2025",
         status: "Accepted",
         tags: ["VirInsight", "Sentiment", "Anomaly detection"],
+        demoSlug: "virinsight",
       },
       {
         id: "finsec-ieice",
@@ -101,6 +103,7 @@ export const en: SiteContent = {
         year: "2026",
         status: "Accepted",
         tags: ["FinSec", "Few-shot"],
+        demoSlug: "finsec",
       },
       {
         id: "security-valve-globecom",
@@ -110,6 +113,7 @@ export const en: SiteContent = {
         year: "2026",
         status: "Under submission",
         tags: ["Security Valve", "Semantic channel", "DER"],
+        demoSlug: "security-valve",
       },
       {
         id: "icc-2024",
@@ -119,6 +123,7 @@ export const en: SiteContent = {
         year: "2024",
         status: "Published",
         tags: ["Price prediction", "Green crypto"],
+        demoSlug: "crypto-prediction",
       },
       {
         id: "isips-2023",
@@ -128,13 +133,15 @@ export const en: SiteContent = {
         year: "2023",
         status: "Published",
         tags: ["Econometrics", "AI forecasting"],
+        demoSlug: "crypto-prediction",
       },
     ],
   },
   projects: {
     title: "Projects",
     subtitle:
-      "From embedded multi-agent defense to financial dialogue security and sentiment-driven market analytics.",
+      "From embedded multi-agent defense to financial dialogue security and sentiment-driven market analytics. Click to try interactive demos.",
+    tryDemo: "Try demo →",
     items: [
       {
         id: "security-valve",
@@ -155,6 +162,7 @@ export const en: SiteContent = {
           "GlobeCom manuscript in progress",
         ],
         stack: ["Python", "OpenAI API", "Discord API", "OpenClaw"],
+        demoSlug: "security-valve",
       },
       {
         id: "finsec",
@@ -173,6 +181,7 @@ export const en: SiteContent = {
           "Journal submission in progress; IEICE 2026 accepted",
         ],
         stack: ["Python", "OpenAI API", "NLP", "Multi-Agent"],
+        demoSlug: "finsec",
       },
       {
         id: "virinsight",
@@ -191,6 +200,7 @@ export const en: SiteContent = {
           "IEEE TCE accepted (IF ≈ 10.3)",
         ],
         stack: ["Python", "NLP", "ARIMA", "LoRA", "Random Forest"],
+        demoSlug: "virinsight",
       },
       {
         id: "crypto-prediction",
@@ -205,50 +215,7 @@ export const en: SiteContent = {
         ],
         outcomes: ["Published at IEEE ICC 2024"],
         stack: ["Python", "Econometrics", "Machine learning"],
-      },
-    ],
-  },
-  agentLab: {
-    title: "Agent Lab · Extension Ideas",
-    subtitle:
-      "This site follows Harness Engineering: the repo is the system of record so Codex / Cursor agents can ship features safely on top.",
-    harnessIntro:
-      "Harness Engineering is about designing the environment around agents—structured docs/, a short AGENTS.md map, frontend conventions, and deploy feedback (Vercel previews)—not longer prompts. Humans specify intent; agents implement within guardrails.",
-    ideas: [
-      {
-        title: "Live publication & project dashboard",
-        description:
-          "Drive timeline cards from docs/product-specs JSON; agents update Markdown/JSON only, not React layout.",
-        harnessNotes:
-          "Maintain publications.json under docs/generated/ with CI schema checks.",
-      },
-      {
-        title: "FinSec read-only demo sandbox",
-        description:
-          "Visualize multi-turn dialogue risk fusion for conferences and recruiting.",
-        harnessNotes:
-          "Mock API + fixed eval set; secrets only in Vercel env vars.",
-      },
-      {
-        title: "Bilingual parity CI",
-        description:
-          "Keep content/zh.ts and content/en.ts in sync via docs/profile source texts.",
-        harnessNotes:
-          "scripts/check-i18n.ts fails CI on key mismatch.",
-      },
-      {
-        title: "Security Valve topology canvas",
-        description:
-          "Animated flow: Commander → Thinker → Security Valve → Finance Agent.",
-        harnessNotes:
-          "Flow spec in docs/design-docs/security-valve-flow.md; UI renders only.",
-      },
-      {
-        title: "Paper PDF index",
-        description:
-          "Link assets in public/papers/ to publication cards for one-click download.",
-        harnessNotes:
-          "Summaries in docs/references; avoid re-parsing PDFs in agents.",
+        demoSlug: "crypto-prediction",
       },
     ],
   },
@@ -261,7 +228,6 @@ export const en: SiteContent = {
   },
   footer: {
     builtWith: "Next.js · Tailwind · Vercel",
-    harnessNote: "Repository structured for Harness Engineering — see AGENTS.md",
   },
   langToggle: { zh: "中文", en: "EN" },
 };

@@ -1,7 +1,6 @@
 "use client";
 
 import { About } from "./About";
-import { AgentLab } from "./AgentLab";
 import { Contact } from "./Contact";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
@@ -18,7 +17,6 @@ export function HomePage() {
         <About />
         <Publications />
         <Projects />
-        <AgentLab />
         <Contact />
       </main>
       <Footer />

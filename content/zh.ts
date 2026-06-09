@@ -10,7 +10,6 @@ export const zh: SiteContent = {
     about: "关于",
     publications: "论文",
     projects: "项目",
-    agentLab: "Agent 实验室",
     contact: "联系",
   },
   hero: {
@@ -71,7 +70,8 @@ export const zh: SiteContent = {
   },
   publications: {
     title: "研究与论文",
-    subtitle: "期刊与会议成果，涵盖金融 Agent 安全、情绪分析与价格预测。",
+    subtitle: "期刊与会议成果，涵盖金融 Agent 安全、情绪分析与价格预测。点击可体验交互演示。",
+    tryDemo: "体验模型 →",
     journal: "期刊 / 在投",
     conference: "会议",
     items: [
@@ -83,6 +83,7 @@ export const zh: SiteContent = {
         year: "2026",
         status: "投稿中",
         tags: ["金融对话安全", "多阶段检测", "对抗推理"],
+        demoSlug: "finsec",
       },
       {
         id: "virinsight-tce",
@@ -92,6 +93,7 @@ export const zh: SiteContent = {
         year: "2025",
         status: "已接收",
         tags: ["VirInsight", "情绪分析", "异常检测"],
+        demoSlug: "virinsight",
       },
       {
         id: "finsec-ieice",
@@ -101,6 +103,7 @@ export const zh: SiteContent = {
         year: "2026",
         status: "已接收",
         tags: ["FinSec", "少样本检测"],
+        demoSlug: "finsec",
       },
       {
         id: "security-valve-globecom",
@@ -110,6 +113,7 @@ export const zh: SiteContent = {
         year: "2026",
         status: "投稿中",
         tags: ["Security Valve", "语义信道", "DER"],
+        demoSlug: "security-valve",
       },
       {
         id: "icc-2024",
@@ -119,6 +123,7 @@ export const zh: SiteContent = {
         year: "2024",
         status: "已发表",
         tags: ["价格预测", "绿色加密货币"],
+        demoSlug: "crypto-prediction",
       },
       {
         id: "isips-2023",
@@ -128,12 +133,14 @@ export const zh: SiteContent = {
         year: "2023",
         status: "已发表",
         tags: ["计量经济学", "AI 预测"],
+        demoSlug: "crypto-prediction",
       },
     ],
   },
   projects: {
     title: "项目经历",
-    subtitle: "从嵌入式多智能体防御到金融对话安全与情绪分析系统的完整研究链路。",
+    subtitle: "从嵌入式多智能体防御到金融对话安全与情绪分析系统的完整研究链路。点击进入交互演示。",
+    tryDemo: "体验模型 →",
     items: [
       {
         id: "security-valve",
@@ -154,6 +161,7 @@ export const zh: SiteContent = {
           "GlobeCom 论文撰写与投稿进行中",
         ],
         stack: ["Python", "OpenAI API", "Discord API", "OpenClaw"],
+        demoSlug: "security-valve",
       },
       {
         id: "finsec",
@@ -173,6 +181,7 @@ export const zh: SiteContent = {
           "期刊论文投稿中；IEICE 2026 会议论文已接收",
         ],
         stack: ["Python", "OpenAI API", "NLP", "Multi-Agent"],
+        demoSlug: "finsec",
       },
       {
         id: "virinsight",
@@ -192,6 +201,7 @@ export const zh: SiteContent = {
           "IEEE TCE（IF≈10.3）已接收",
         ],
         stack: ["Python", "NLP", "ARIMA", "LoRA", "Random Forest"],
+        demoSlug: "virinsight",
       },
       {
         id: "crypto-prediction",
@@ -206,50 +216,7 @@ export const zh: SiteContent = {
         ],
         outcomes: ["IEEE ICC 2024 论文发表"],
         stack: ["Python", "计量经济学", "机器学习"],
-      },
-    ],
-  },
-  agentLab: {
-    title: "Agent 实验室 · 可扩展方向",
-    subtitle:
-      "本站点采用 Harness Engineering 组织知识：仓库即单一事实来源，便于 Codex / Cursor 等 Agent 在此基础上迭代功能。",
-    harnessIntro:
-      "Harness Engineering 的核心不是「写更多提示词」，而是为 Agent 设计可验证的环境：结构化 docs/、短 AGENTS.md 目录、明确的前端约定与部署反馈环（Vercel Preview）。人类定义意图与边界，Agent 在约束内实现功能。",
-    ideas: [
-      {
-        title: "实时论文与项目仪表板",
-        description:
-          "从 docs/product-specs 读取结构化 JSON，自动生成时间线与引用卡片；Agent 只需更新 Markdown/JSON，无需改 UI 代码。",
-        harnessNotes:
-          "在 docs/generated/ 维护 publications.json，CI 校验 schema；前端纯展示层。",
-      },
-      {
-        title: "FinSec 演示沙箱（只读）",
-        description:
-          "嵌入多轮对话样例与风险评分可视化，展示四层检测如何融合——适合会议 Demo 与招生说明。",
-        harnessNotes:
-          "Mock API + 固定 eval 数据集；禁止真实 API Key 入库，密钥走 Vercel Environment。",
-      },
-      {
-        title: "双语内容协同编辑流",
-        description:
-          "content/zh.ts 与 content/en.ts 由 Agent 对照 docs/profile 双语稿同步，PR 时运行 parity 检查确保字段一一对应。",
-        harnessNotes:
-          "scripts/check-i18n.ts 对比 key 路径；违背则 CI 失败。",
-      },
-      {
-        title: "Security Valve 交互拓扑图",
-        description:
-          "用可动画的 Mermaid/Canvas 展示 Commander → Thinker → Security Valve → Finance Agent 消息流与拦截点。",
-        harnessNotes:
-          "设计稿存 docs/design-docs/security-valve-flow.md，组件只渲染不承载业务规则。",
-      },
-      {
-        title: "PDF 文献一键索引",
-        description:
-          "将 assets/ 下论文 PDF 链接到 publications 卡片，Vercel 静态托管；Agent 更新元数据即可。",
-        harnessNotes:
-          "public/papers/ 存文件；docs/references 记录 DOI 与摘要，避免重复解析 PDF。",
+        demoSlug: "crypto-prediction",
       },
     ],
   },
@@ -262,7 +229,6 @@ export const zh: SiteContent = {
   },
   footer: {
     builtWith: "Next.js · Tailwind · Vercel",
-    harnessNote: "Repository structured for Harness Engineering — see AGENTS.md",
   },
   langToggle: { zh: "中文", en: "EN" },
 };

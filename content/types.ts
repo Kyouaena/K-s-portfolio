@@ -7,6 +7,7 @@ export interface Publication {
   year: string;
   status: string;
   tags: string[];
+  demoSlug?: string;
 }
 
 export interface Project {
@@ -18,13 +19,8 @@ export interface Project {
   responsibilities: string[];
   outcomes: string[];
   stack: string[];
+  demoSlug?: string;
   links?: { label: string; href: string }[];
-}
-
-export interface AgentIdea {
-  title: string;
-  description: string;
-  harnessNotes: string;
 }
 
 export interface SiteContent {
@@ -36,7 +32,6 @@ export interface SiteContent {
     about: string;
     publications: string;
     projects: string;
-    agentLab: string;
     contact: string;
   };
   hero: {
@@ -56,6 +51,7 @@ export interface SiteContent {
   publications: {
     title: string;
     subtitle: string;
+    tryDemo: string;
     journal: string;
     conference: string;
     items: Publication[];
@@ -63,13 +59,8 @@ export interface SiteContent {
   projects: {
     title: string;
     subtitle: string;
+    tryDemo: string;
     items: Project[];
-  };
-  agentLab: {
-    title: string;
-    subtitle: string;
-    harnessIntro: string;
-    ideas: AgentIdea[];
   };
   contact: {
     title: string;
@@ -79,7 +70,6 @@ export interface SiteContent {
   };
   footer: {
     builtWith: string;
-    harnessNote: string;
   };
   langToggle: { zh: string; en: string };
 }
