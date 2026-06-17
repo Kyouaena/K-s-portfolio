@@ -1,0 +1,9 @@
+# Large local source files — not needed for the website build
+*.pdf
+*.pptx
+*.docx
+
+# Standard excludes
+node_modules
+.next
+.git
