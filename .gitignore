@@ -27,7 +27,9 @@ next-env.d.ts
 # agent tools
 .agent-tools/
 
-# Optional: ignore large source PDFs (uncomment to keep repo small for Vercel/GitHub)
-# *.pdf
-# *.pptx
-# *.docx
+# Local source materials (keep on disk, not in GitHub)
+*.pdf
+*.pptx
+*.docx
+assets/source/*
+!assets/source/README.md
