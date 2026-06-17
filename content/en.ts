@@ -227,7 +227,7 @@ export const en: SiteContent = {
       "Fork to GitHub and use Deploy with Vercel in the README; pushes to main auto-deploy.",
   },
   footer: {
-    builtWith: "Next.js · Tailwind · Vercel",
+    builtWith: "Next.js · Tailwind · Vercel · v2 interactive demos",
   },
   langToggle: { zh: "中文", en: "EN" },
 };

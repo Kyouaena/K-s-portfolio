@@ -228,7 +228,7 @@ export const zh: SiteContent = {
       "Fork 本仓库至 GitHub，点击 README 中的 Deploy with Vercel 即可一键上线；推送 main 分支自动触发部署。",
   },
   footer: {
-    builtWith: "Next.js · Tailwind · Vercel",
+    builtWith: "Next.js · Tailwind · Vercel · v2 交互演示",
   },
   langToggle: { zh: "中文", en: "EN" },
 };
